@@ -10,12 +10,12 @@
         "contactId": "*"
       },
       "private": false,
-      "description": "Lists all contacts and allows to show their personal data.",
+      "description": "Lists all Jokes.",
       "properties": {
         "title": "Jokes",
         "itemText": "person_outline",
         "itemCssClass": "material-icons",
-        "path": ""
+        "path": "jokes"
       }
     }
    ]

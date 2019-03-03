@@ -64,7 +64,7 @@
       "type": "view",
       "qualifier": {
         "entity": "joke",
-        "action": "list",
+        "presentation": "list",
         "contactId": "*"
       }
     }
