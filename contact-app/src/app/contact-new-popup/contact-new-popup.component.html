@@ -1,0 +1,12 @@
+<h2>New contact</h2>
+
+<form [formGroup]="form" autocomplete="off">
+  <label for="firstname">Firstname *</label>
+  <input id="firstname" [formControlName]="FIRSTNAME">
+
+  <label for="lastname">Lastname *</label>
+  <input id="lastname" [formControlName]="LASTNAME">
+</form>
+
+<hr>
+<button (click)="onOk()" [disabled]="!form.valid">Create</button>

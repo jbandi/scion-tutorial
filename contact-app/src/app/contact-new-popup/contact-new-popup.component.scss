@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  padding: 1em;
+
+  > h2 {
+    margin: 0 0 1.5em 0;
+  }
+
+  > form {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-column-gap: 1em;
+    grid-row-gap: .5em;
+  }
+
+  > hr {
+    margin-top: 1.5em;
+  }
+}

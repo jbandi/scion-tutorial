@@ -1,0 +1,64 @@
+{
+  "name": "Contact Application",
+  "baseUrl": "#",
+  "capabilities": [
+    {
+      "type": "activity",
+      "qualifier": {
+        "entryPoint": "contacts",
+        "id": "*"
+      },
+      "description": "Lists all contacts and allows to show their personal data.",
+      "properties": {
+        "title": "Contacts",
+        "itemText": "person_outline",
+        "itemCssClass": "material-icons",
+        "path": "contacts"
+      }
+    },
+    {
+      "type": "popup",
+      "qualifier": {
+        "entity": "contact",
+        "action": "create"
+      },
+      "description": "Allows to create a new contact.",
+      "properties": {
+        "path": "contact/new",
+        "width": "400px",
+        "height": "200px"
+      }
+    },
+    {
+      "type": "view",
+      "qualifier": {
+        "entity": "contact",
+        "id": "*"
+      },
+      "private": false,
+      "description": "Shows personal data of a contact.",
+      "properties": {
+        "path": "contact/:id",
+        "title": "Contact"
+      }
+    }
+  ],
+  "intents": [
+    {
+      "type": "view",
+      "qualifier": {
+        "entity": "communication",
+        "presentation": "list",
+        "contactId": "*"
+      }
+    },
+    {
+      "type": "popup",
+      "qualifier": {
+        "entity": "communication",
+        "action": "create",
+        "contactId": "*"
+      }
+    }
+  ]
+}
