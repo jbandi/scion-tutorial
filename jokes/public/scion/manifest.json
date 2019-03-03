@@ -1,12 +1,11 @@
 {
   "name": "Joke Application",
-  "baseUrl": "#",
+  "baseUrl": "",
   "capabilities": [
     {
       "type": "view",
       "qualifier": {
         "entity": "joke",
-        "presentation": "list",
         "contactId": "*"
       },
       "private": false,
@@ -15,7 +14,7 @@
         "title": "Jokes",
         "itemText": "person_outline",
         "itemCssClass": "material-icons",
-        "path": "jokes"
+        "path": "jokes/:contactId"
       }
     }
    ]

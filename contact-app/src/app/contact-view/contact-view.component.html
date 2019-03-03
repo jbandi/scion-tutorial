@@ -1,20 +1,24 @@
 <form [formGroup]="form" autocomplete="off">
-  <label for="firstname">Firstname *</label>
-  <input id="firstname" [formControlName]="FIRSTNAME">
+  <label for="firstname">Firstname *</label> <input id="firstname" [formControlName]="FIRSTNAME" />
 
-  <label for="lastname">Lastname *</label>
-  <input id="lastname" [formControlName]="LASTNAME">
+  <label for="lastname">Lastname *</label> <input id="lastname" [formControlName]="LASTNAME" />
 </form>
 
 ➀
 <ul>
+  <li><a href="" (click)="onCommunicationAdd($event)">Add new communication</a></li>
   <li>
-    <a href="" (click)="onCommunicationAdd($event)">Add new communication</a>
+    <a
+      [wbRouterLink]="{ entity: 'communication', presentation: 'list', contactId: contact.id }"
+      [wbRouterLinkExtras]="{ matrixParams: { contactFullName: contact.firstname + ' ' + contact.lastname } }">
+      Open communications
+    </a>
   </li>
   <li>
-    <a [wbRouterLink]="{entity: 'communication', presentation: 'list', contactId: contact.id}"
-       [wbRouterLinkExtras]="{matrixParams: {contactFullName: contact.firstname + ' ' + contact.lastname}}">
-      Open communications
+    <a
+      [wbRouterLink]="{ entity: 'joke', contactId: contact.id }"
+      [wbRouterLinkExtras]="{ queryParams: { contactFullName: contact.firstname + ' ' + contact.lastname } }">
+      Tell a joke
     </a>
   </li>
 </ul>
