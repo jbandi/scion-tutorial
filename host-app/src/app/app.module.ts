@@ -22,6 +22,10 @@ import { WorkbenchModule } from '@scion/workbench';
           manifestUrl: 'https://scion-workbench-application-platform-communication.now.sh/assets/manifest.json'
         },
         {
+          symbolicName: 'joke-app',
+          manifestUrl: 'http://localhost:3000/scion/manifest.json'
+        },
+        {
           symbolicName: 'dev-tools-app',
           manifestUrl: 'https://scion-workbench-application-platform-devtools.now.sh/assets/manifest.json',
           scopeCheckDisabled: true

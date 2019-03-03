@@ -59,6 +59,14 @@
         "action": "create",
         "contactId": "*"
       }
+    },
+    {
+      "type": "view",
+      "qualifier": {
+        "entity": "joke",
+        "action": "list",
+        "contactId": "*"
+      }
     }
   ]
 }
